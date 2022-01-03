@@ -2,7 +2,6 @@ h1 {
     font-style: italic;
     color: grey;
 }
-
 /*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
 
 /*
@@ -117,6 +116,7 @@ h1 {
    color: #fff;
    background-color: #ece5ce;
    transition: background-color 0.5s ease;
+   background-color: whitesmoke;
  }
  
  body.won {
@@ -469,7 +469,7 @@ h1 {
  .violet {
    background: #993394;
  }
- .brown {
+ .marron {
    background: #6b4d39;
  }
  .white {
