@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>JS Mastermind</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,800,800italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<!--[if lt IE 7]>
+  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <!-- Add your site or application content here -->
+  
+  <div class="wrapper">
+    <header>
+      <h1>Mastermind</h1>
+      <button id="newGame" class="vert">Redémarrer</button>
+    </header>
+    <div class="container">
+      <div id="guesses">
+        <div class="code row">
+          <div class="secret socket">?</div>
+          <div class="secret socket">?</div>
+          <div class="secret socket">?</div>
+          <div class="secret socket">?</div>
+        </div>
+        <div class="guess">
+          <div class="socket"></div>
+          <div class="socket"></div>
+          <div class="socket"></div>
+          <div class="socket"></div>
+        </div>
+        <div class="guess">
+          <div class="socket"></div>
+          <div class="socket"></div>
+          <div class="socket"></div>
+          <div class="socket"></div>
+        </div>
+        <div class="guess">
+          <div class="socket"></div>
+          <div class="socket"></div>
+          <div class="socket"></div>
+          <div class="socket"></div>
+        </div>
+        <div class="guess">
+          <div class="socket"></div>
+          <div class="socket"></div>
+          <div class="socket"></div>
+          <div class="socket"></div>
+        </div>
+        <div class="guess">
+          <div class="socket"></div>
+          <div class="socket"></div>
+          <div class="socket"></div>
+          <div class="socket"></div>
+        </div>
+        <div class="guess">
+          <div class="socket"></div>
+          <div class="socket"></div>
+          <div class="socket"></div>
+          <div class="socket"></div>
+        </div>
+        <div class="guess">
+          <div class="socket"></div>
+          <div class="socket"></div>
+          <div class="socket"></div>
+          <div class="socket"></div>
+        </div>
+        <div class="guess">
+          <div class="socket"></div>
+          <div class="socket"></div>
+          <div class="socket"></div>
+          <div class="socket"></div>
+        </div>
+        <div class="guess">
+          <div class="socket"></div>
+          <div class="socket"></div>
+          <div class="socket"></div>
+          <div class="socket"></div>
+        </div>
+        <div class="guess">
+          <div class="socket"></div>
+          <div class="socket"></div>
+          <div class="socket"></div>
+          <div class="socket"></div>
+        </div>
+        <div class="guess">
+          <div class="socket"></div>
+          <div class="socket"></div>
+          <div class="socket"></div>
+          <div class="socket"></div>
+        </div>
+        <div class="guess">
+          <div class="socket"></div>
+          <div class="socket"></div>
+          <div class="socket"></div>
+          <div class="socket"></div>
+        </div>
+      </div>
+
+      <div id="hints">
+        <div class="hint">
+          <div class="row">
+            <div class="js-hint-socket socket"></div>
+            <div class="js-hint-socket socket"></div>
+          </div>
+          <div class="row">
+            <div class="js-hint-socket socket"></div>
+            <div class="js-hint-socket socket"></div>
+          </div>
+        </div>
+        <div class="hint">
+          <div class="row">
+            <div class="js-hint-socket socket"></div>
+            <div class="js-hint-socket socket"></div>
+          </div>
+          <div class="row">
+            <div class="js-hint-socket socket"></div>
+            <div class="js-hint-socket socket"></div>
+          </div>
+        </div>
+        <div class="hint">
+          <div class="row">
+            <div class="js-hint-socket socket"></div>
+            <div class="js-hint-socket socket"></div>
+          </div>
+          <div class="row">
+            <div class="js-hint-socket socket"></div>
+            <div class="js-hint-socket socket"></div>
+          </div>
+        </div>
+        <div class="hint">
+          <div class="row">
+            <div class="js-hint-socket socket"></div>
+            <div class="js-hint-socket socket"></div>
+          </div>
+          <div class="row">
+            <div class="js-hint-socket socket"></div>
+            <div class="js-hint-socket socket"></div>
+          </div>
+        </div>
+        <div class="hint">
+          <div class="row">
+            <div class="js-hint-socket socket"></div>
+            <div class="js-hint-socket socket"></div>
+          </div>
+          <div class="row">
+            <div class="js-hint-socket socket"></div>
+            <div class="js-hint-socket socket"></div>
+          </div>
+        </div>
+        <div class="hint">
+          <div class="row">
+            <div class="js-hint-socket socket"></div>
+            <div class="js-hint-socket socket"></div>
+          </div>
+          <div class="row">
+            <div class="js-hint-socket socket"></div>
+            <div class="js-hint-socket socket"></div>
+          </div>
+        </div>
+        <div class="hint">
+          <div class="row">
+            <div class="js-hint-socket socket"></div>
+            <div class="js-hint-socket socket"></div>
+          </div>
+          <div class="row">
+            <div class="js-hint-socket socket"></div>
+            <div class="js-hint-socket socket"></div>
+          </div>
+        </div>
+        <div class="hint">
+          <div class="row">
+            <div class="js-hint-socket socket"></div>
+            <div class="js-hint-socket socket"></div>
+          </div>
+          <div class="row">
+            <div class="js-hint-socket socket"></div>
+            <div class="js-hint-socket socket"></div>
+          </div>
+        </div>
+        <div class="hint">
+          <div class="row">
+            <div class="js-hint-socket socket"></div>
+            <div class="js-hint-socket socket"></div>
+          </div>
+          <div class="row">
+            <div class="js-hint-socket socket"></div>
+            <div class="js-hint-socket socket"></div>
+          </div>
+        </div>
+        <div class="hint">
+          <div class="row">
+            <div class="js-hint-socket socket"></div>
+            <div class="js-hint-socket socket"></div>
+          </div>
+          <div class="row">
+            <div class="js-hint-socket socket"></div>
+            <div class="js-hint-socket socket"></div>
+          </div>
+        </div>
+        <div class="hint">
+          <div class="row">
+            <div class="js-hint-socket socket"></div>
+            <div class="js-hint-socket socket"></div>
+          </div>
+          <div class="row">
+            <div class="js-hint-socket socket"></div>
+            <div class="js-hint-socket socket"></div>
+          </div>
+        </div>
+        <div class="hint">
+          <div class="row">
+            <div class="js-hint-socket socket"></div>
+            <div class="js-hint-socket socket"></div>
+          </div>
+          <div class="row">
+            <div class="js-hint-socket socket"></div>
+            <div class="js-hint-socket socket"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+ 
+    
+    <div id="options" class="container">
+      <button value="1" id="vert" class="option vert"></button>
+      <button value="2" id="violet" class="option violet"></button>
+      <button value="3" id="rouge" class="option rouge"></button>
+      <button value="4" id="jaune" class="option jaune"></button>
+      <button value="5" id="bleu" class="option bleu"></button>
+      <button value="6" id="marron" class="option marron"></button>
+      <button id="delete" class="">&#8672;</button>
+    </div>
+  </div>
+
+  <div id="modalOverlay">
+    <div id="modalMessage">
+      <button class="large">OK</button>
+      <button class="large primary">Redémarrer</button>
+    </div>
+  </div>
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>  
+</body>
+</html>
